@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { FetchSearchData } from '../../pages/api/fetchData';
 
 export const Body = () => {
@@ -10,7 +10,7 @@ export const Body = () => {
 
   return (
     <div>
-      <h2>Hello World</h2>
+      <h2>Hello Worldです</h2>
     </div>
   )
 }
