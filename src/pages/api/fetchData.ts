@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/';
+const URL = '//webservice.recruit.co.jp/hotpepper/gourmet/v1/';
 const KEY = '92997d822eb26031';
 
 const CNF = {
