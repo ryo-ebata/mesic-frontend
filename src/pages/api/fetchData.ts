@@ -4,10 +4,10 @@ const URL = 'https://webservice.recruit.co.jp/hotpepper/gourmet/v1/';
 const KEY = '92997d822eb26031';
 
 const CNF = {
-    // headers: {
-    //     'Access-Control-Allow-Origin': 'http://webservice.recruit.co.jp/',
-    //     'Access-Control-Allow-Headers': "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept"
-    // },
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept"
+    },
     params: {
         key: KEY,
         large_area: 'Z011',
