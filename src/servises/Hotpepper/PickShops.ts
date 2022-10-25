@@ -1,4 +1,4 @@
-import { Shop } from "../../constants/Types/Hotpepper";
+import { Shop, Shops } from "../../constants/Types/Hotpepper";
 
 /**
  * Hotpepper APIから取得したデータを必要なものだけ抜き出す。
@@ -13,9 +13,9 @@ import { Shop } from "../../constants/Types/Hotpepper";
  * @param param number
  * @returns Shops
  */
-export const PickApiData = (data: JSON, param: 0 | 1 | 2 | 3 | 4) => {
-    const response: [string, string][] = Object.entries(data);
-    const results: string[] = Object.values(Object.values(response[0][1])[0]);
+export const PickApiData = (data: JSON, param: 0 | 1 | 2 | 3 | 4): Shops => {
+    const response: [string, Shop][] = Object.entries(data);
+    const results: Shops[] = Object.values(Object.values(response[0][1])[0]);
 
     return results[param];
     

@@ -10,8 +10,10 @@ const mapData: MapData = {
   range: 5
 }
 
+const initialData: Shops = []; 
+
 export const Body = () => {
-  const [shops, setShops] = useState([])
+  const [shops, setShops] = useState(initialData)
   
   useEffect(() => {
     const fetchShops = async () => {

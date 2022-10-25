@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { URL, CNF } from '../../constants/Consts/Hotpepper/API'
+import { HOTPEPPER_SEACH_QUERY, HOTPEPPER_SEACH_CONFIG } from '../../constants/Consts/Hotpepper/API'
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const params = new URLSearchParams(CNF.params); 
-    const response = await fetch(`${URL}?${params}`)
+    const params = new URLSearchParams(HOTPEPPER_SEACH_CONFIG.params); 
+    const response = await fetch(`${HOTPEPPER_SEACH_QUERY}?${params}`)
     const shops = await response.json()
 
     res.status(200).json({ shops })

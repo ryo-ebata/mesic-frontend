@@ -1,5 +1,4 @@
 import { ElementType } from "react";
-import { CardBack } from "../../Organisms/CardBack";
 import { CardFront } from "../../Organisms/CardFront";
 import styles from './style.module.css';
 
@@ -31,20 +30,9 @@ export type Props = {
 export const CardSection: React.FC<Props> = ({ image, title, copy, content, variant, color, component }) => {
 
     return (
-        <div className={`${styles.card} ${styles.is_surface}`}>
+        <div id="card" className={`${styles.card} ${styles.is_surface}`}>
             <div className={styles.card_surface} >
                 <CardFront
-                    image={image}
-                    title={title}
-                    copy={copy}
-                    content={content}
-                    variant={variant}
-                    color={color}
-                    component={component}
-                />
-            </div>
-            <div className={styles.card_reverse}>
-                <CardBack
                     image={image}
                     title={title}
                     copy={copy}
