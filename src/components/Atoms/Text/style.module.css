@@ -1,0 +1,19 @@
+.common {
+    font-family: sans-serif;
+}
+
+.font_s{
+    font-size: 8px;
+}
+
+.font_m{
+    font-size: 16px;
+}
+
+.font_l{
+    font-size: 24px;
+}
+
+.font_xl{
+    font-size: 32px;
+}
