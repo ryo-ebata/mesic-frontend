@@ -1,6 +1,7 @@
 .card {
     position: relative;
-    width: 250px;
+    width: 380px;
+    margin: 20px 0;
 }
 
 .card_reverse {
@@ -10,7 +11,7 @@
 }
 
 /* 表面の表示 */
-.is-surface .card_surface {
+.is_surface .card_surface {
     opacity: 1;
     transform: rotateY(0deg);
     transition:
@@ -18,7 +19,7 @@
         transform 300ms 150ms;
 }
 
-.is-surface .card_reverse {
+.is_surface .card_reverse {
     opacity: 0;
     transform: rotateY(90deg);
     transition:
@@ -27,7 +28,7 @@
 }
 
 /* 裏面の表示 */
-.is-reverse .card_surface {
+.is_reverse .card_surface {
     opacity: 0;
     transform: rotateY(90deg);
     transition:
@@ -35,7 +36,7 @@
         transform 300ms;
 }
 
-.is-reverse .card_reverse {
+.is_reverse .card_reverse {
     opacity: 1;
     transform: rotateY(0deg);
     transition:

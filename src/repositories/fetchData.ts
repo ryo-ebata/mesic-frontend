@@ -4,7 +4,6 @@ import { MapData } from '../constants/Types/Hotpepper/MapData';
 
 export const FetchSearchData = async (mapData: MapData) => {
 
-    console.log("パラメータを付与します。");
     [
         CNF.params.lat,
         CNF.params.lng,
@@ -16,7 +15,6 @@ export const FetchSearchData = async (mapData: MapData) => {
     ];
     
     try {
-        console.log('success');
         return await axios.get(URL, CNF);
     } catch (err) {
         console.log(err);
