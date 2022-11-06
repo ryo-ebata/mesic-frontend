@@ -1,4 +1,4 @@
-.card {
+/* .card {
     position: relative;
     width: 250px;
 }
@@ -9,7 +9,6 @@
     left: 0;
 }
 
-/* 表面の表示 */
 .is-surface .card_surface {
     opacity: 1;
     transform: rotateY(0deg);
@@ -26,7 +25,6 @@
         transform 300ms;
 }
 
-/* 裏面の表示 */
 .is-reverse .card_surface {
     opacity: 0;
     transform: rotateY(90deg);
@@ -41,4 +39,4 @@
     transition:
         opacity 100ms 150ms,
         transform 300ms 150ms;
-}
+} */
