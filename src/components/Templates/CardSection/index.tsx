@@ -1,5 +1,5 @@
 import { ElementType } from "react";
-import { CardFront } from "../../Organisms/CardFront";
+import { CardFront } from "../../Organisms/Card";
 import styles from "./style.module.css";
 
 export type Props = {
