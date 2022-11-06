@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Body } from "../components/Page";
+import { MatchingCards } from "../components/Page/MatchingCards";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Body />
+        <MatchingCards />
       </main>
 
       <footer></footer>

@@ -1,6 +1,5 @@
 import { Config } from "../../../Types/Hotpepper";
-
-const HOTPEPPER_API_KEY: string = process.env.HOTPEPPER_API_KEY!;
+import { HOTPEPPER_API_KEY } from "../ApiKey";
 
 const HOTPEPPER_SEACH_CONFIG: Config = {
   headers: {
@@ -15,4 +14,4 @@ const HOTPEPPER_SEACH_CONFIG: Config = {
   },
 };
 
-export { HOTPEPPER_API_KEY, HOTPEPPER_SEACH_CONFIG };
+export { HOTPEPPER_SEACH_CONFIG };

@@ -1,8 +1,9 @@
-import { Shops, Shop, MapData } from "../../constants/Types/Hotpepper";
-import { CardSection } from "../Templates/CardSection";
+import { Shops, MapData } from "../../../constants/Types/Hotpepper";
+import { CardSection } from "../../Templates/CardSection";
 import { useEffect, useState } from "react";
-import { PickApiData } from "../../servises/Hotpepper/PickShops";
-import { BackGroundImage } from "../Organisms/BackGroundImage";
+import { PickApiData } from "../../../servises/Hotpepper/PickShops";
+import { BackGroundImage } from "../../Organisms/BackGroundImage";
+import { RESPONSE_PARAMS } from "../../../constants/Consts/Hotpepper/ResponseParams";
 
 const mapData: MapData = {
   lat: 34.703261,
@@ -12,14 +13,14 @@ const mapData: MapData = {
 
 const initialData: Shops = [];
 
-export const Body = () => {
+export const MatchingCards = () => {
   const [shops, setShops] = useState(initialData);
 
   useEffect(() => {
     const fetchShops = async () => {
       const response: Response = await fetch("/api/hotpepper");
       const data: JSON = await response.json();
-      const shops: Shops = PickApiData(data, 4);
+      const shops: Shops = PickApiData(data, RESPONSE_PARAMS.SHOPS);
 
       setShops(shops);
     };
