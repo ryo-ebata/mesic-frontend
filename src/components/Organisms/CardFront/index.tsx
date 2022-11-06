@@ -45,7 +45,7 @@ export const CardFront: React.FC<Props> = ({
 }) => {
   return (
     <Card>
-      <img className={styles.card_img} src={image} />
+      <img className={styles.card_img} src={image} alt={title} />
       <CardHeader title={title} subheader={copy} />
       <CardContent>
         <Typography variant={variant} color={color} component={component}>
