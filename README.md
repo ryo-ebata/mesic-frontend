@@ -33,6 +33,8 @@ http://localhost:3000
   - Vercel
   - Hotpepper API
   - Material UI
+  - emotion CSS
+  - Framer motion
 - **Backend**
   - NestJS
   - TypeScript
