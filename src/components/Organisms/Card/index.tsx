@@ -1,13 +1,6 @@
-import {
-  Card,
-  CardMedia,
-  CardHeader,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Card, CardHeader, CardContent, Typography } from "@mui/material";
 import { ElementType } from "react";
 import { CardFooter } from "../../Molecules/CardFooter";
-import styles from "./style.module.css";
 
 export type Props = {
   image: string;
@@ -45,7 +38,15 @@ export const CardFront: React.FC<Props> = ({
 }) => {
   return (
     <Card>
-      <img className={styles.card_img} src={image} alt={title} />
+      <img
+        style={{
+          width: "100%",
+          height: "200px",
+          objectFit: "cover",
+        }}
+        src={image}
+        alt={title}
+      />
       <CardHeader title={title} subheader={copy} />
       <CardContent>
         <Typography variant={variant} color={color} component={component}>

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { HOTPEPPER_SEACH_CONFIG } from "../../constants/Consts/Hotpepper/Config";
-import { HOTPEPPER_SEACH_QUERY } from "../../constants/Consts/Hotpepper/API";
+import { HOTPEPPER_SEACH_CONFIG } from "../../constants/Consts/Hotpepper/ApiConfig";
+import { HOTPEPPER_SEACH_QUERY } from "../../constants/Consts/Hotpepper/ApiUrl";
 
 export default async function handler(
   req: NextApiRequest,

@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { LP } from "../components/Page/LP/SectionOne";
+import Home from "..";
+import { MatchingCards } from "../../components/Page/MatchingCards";
 
-const Home: NextPage = () => {
+const Restaurant: NextPage = () => {
   return (
     <div>
       <Head>
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <LP />
+        <MatchingCards />
       </main>
 
       <footer></footer>
@@ -20,4 +21,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Restaurant;
