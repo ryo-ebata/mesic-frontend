@@ -1,45 +1,5 @@
 .card {
-    position: relative;
-    width: 380px;
-    margin: 20px 0;
-}
-
-.card_reverse {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* 表面の表示 */
-.is_surface .card_surface {
-    opacity: 1;
-    transform: rotateY(0deg);
-    transition:
-        opacity 100ms 150ms,
-        transform 300ms 150ms;
-}
-
-.is_surface .card_reverse {
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition:
-        opacity 50ms 200ms,
-        transform 300ms;
-}
-
-/* 裏面の表示 */
-.is_reverse .card_surface {
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition:
-        opacity 50ms 200ms,
-        transform 300ms;
-}
-
-.is_reverse .card_reverse {
-    opacity: 1;
-    transform: rotateY(0deg);
-    transition:
-        opacity 100ms 150ms,
-        transform 300ms 150ms;
+  position: absolute;
+  width: 380px;
+  margin: 0 auto;
 }

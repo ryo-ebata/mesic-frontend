@@ -1,22 +1,55 @@
-import { Config } from "../../../Types/Hotpepper";
+/**
+ * ---------- 検索用クエリ ----------
+ */
 
+// グルメサーチAPI
 const HOTPEPPER_SEACH_QUERY: string = process.env.HOTPEPPER_SEACH_QUERY!;
-const HOTPEPPER_API_KEY: string = process.env.HOTPEPPER_API_KEY!;
+// 店名サーチAPI
+const HOTPEPPER_SHOP_QUERY: string = process.env.HOTPEPPER_SHOP_QUERY!;
 
-// const HOTPEPPER_SEACH_QUERY: string = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
-// const HOTPEPPER_API_KEY: string = "92997d822eb26031";
+/**
+ * ---------- マスタ ----------
+ */
 
-const HOTPEPPER_SEACH_CONFIG: Config = {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers":
-      "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept",
-  },
-  params: {
-    key: HOTPEPPER_API_KEY,
-    keyword: "w",
-    format: "json",
-  },
+// 検索用ディナー予算マスタAPI
+const HOTPEPPER_BUDGET_MASTER: string = process.env.HOTPEPPER_BUDGET_MASTER!;
+// 大サービスエリアマスタAPI
+const HOTPEPPER_LARGE_SERVICE_AREA_MASTER: string =
+  process.env.HOTPEPPER_LARGE_SERVICE_AREA_MASTER!;
+// サービスエリアマスタAPI
+const HOTPEPPER_SERVICE_AREA_MASTER: string =
+  process.env.HOTPEPPER_SERVICE_AREA_MASTER!;
+// 大エリアマスタAPI
+const HOTPEPPER_LARGE_AREA_MASTER: string =
+  process.env.HOTPEPPER_LARGE_AREA_MASTER!;
+// 中エリアマスタAPI
+const HOTPEPPER_MIDDLE_AREA_MASTER: string =
+  process.env.HOTPEPPER_MIDDLE_AREA_MASTER!;
+// 小エリアマスタAPI
+const HOTPEPPER_SMALL_AREA_MASTER: string =
+  process.env.HOTPEPPER_SMALL_AREA_MASTER!;
+// ジャンルマスタAPI
+const HOTPEPPER_GENRE_MASTER: string = process.env.HOTPEPPER_GENRE_MASTER!;
+// クレジットカードマスタAPI
+const HOTPEPPER_CREDIT_CARD_MASTER: string =
+  process.env.HOTPEPPER_CREDIT_CARD_MASTER!;
+// 特集マスタAPI
+const HOTPEPPER_SPECIAL_MASTER: string = process.env.HOTPEPPER_SPECIAL_MASTER!;
+// 特集カテゴリマスタAPI
+const HOTPEPPER_SPECIAL_CATEGORY_MASTER: string =
+  process.env.HOTPEPPER_SPECIAL_CATEGORY_MASTER!;
+
+export {
+  HOTPEPPER_SEACH_QUERY,
+  HOTPEPPER_SHOP_QUERY,
+  HOTPEPPER_BUDGET_MASTER,
+  HOTPEPPER_LARGE_SERVICE_AREA_MASTER,
+  HOTPEPPER_SERVICE_AREA_MASTER,
+  HOTPEPPER_LARGE_AREA_MASTER,
+  HOTPEPPER_MIDDLE_AREA_MASTER,
+  HOTPEPPER_SMALL_AREA_MASTER,
+  HOTPEPPER_GENRE_MASTER,
+  HOTPEPPER_CREDIT_CARD_MASTER,
+  HOTPEPPER_SPECIAL_MASTER,
+  HOTPEPPER_SPECIAL_CATEGORY_MASTER,
 };
-
-export { HOTPEPPER_SEACH_QUERY, HOTPEPPER_API_KEY, HOTPEPPER_SEACH_CONFIG };
