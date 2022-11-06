@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import type { AppProps } from 'next/app'
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from '../constants/Settings/MaterialUI/theme';
-import createEmotionCache from '../constants/Settings/MaterialUI/createEmotionCache';
+import Head from "next/head";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider, EmotionCache } from "@emotion/react";
+import theme from "../constants/Consts/MaterialUI/theme";
+import createEmotionCache from "../constants/Consts/MaterialUI/createEmotionCache";
 
 const clientSideEmotionCache = createEmotionCache();
 interface MyAppProps extends AppProps {
@@ -23,7 +23,7 @@ function MyApp(props: MyAppProps) {
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
