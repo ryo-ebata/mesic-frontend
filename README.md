@@ -5,7 +5,7 @@
 Hotpepper API を利用し、飲食店のデータベースを利用可能。
 プロダクトの案に関しては、以下の URL から。
 
-https://www.canva.com/design/DAFRIcSH_oc/cihwRPE6rZOtG97P4AVh-A/edit?utm_content=DAFRIcSH_oc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAFRIcSH_oc/cihwRPE6rZOtG97P4AVh-A/view?utm_content=DAFRIcSH_oc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## フロントエンドの環境構築
 
