@@ -8,15 +8,14 @@ import { Shop, Shops } from "../../constants/Types/Hotpepper";
  * 2 = results_returned,
  * 3 = results_start,
  * 4 = shops,
- * 
+ *
  * @param data JSON
  * @param param number
  * @returns Shops
  */
 export const PickApiData = (data: JSON, param: 0 | 1 | 2 | 3 | 4): Shops => {
-    const response: [string, Shop][] = Object.entries(data);
-    const results: Shops[] = Object.values(Object.values(response[0][1])[0]);
+  const response: [string, Shop][] = Object.entries(data);
+  const results: Shops[] = Object.values(Object.values(response[0][1])[0]);
 
-    return results[param];
-    
-}
+  return results[param];
+};

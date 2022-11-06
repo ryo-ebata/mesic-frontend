@@ -4,4 +4,4 @@ import { Response } from "./Response";
 import { Shop } from "./Shop";
 import { Shops } from "./Shops";
 
-export type {Config, MapData, Response, Shop, Shops}
+export type { Config, MapData, Response, Shop, Shops };
