@@ -35,6 +35,8 @@ http://localhost:3000
   - Material UI
   - emotion CSS
   - Framer motion
+  - Three.js
+  - WebGL
 - **Backend**
   - NestJS
   - TypeScript
