@@ -8,7 +8,7 @@ export default async function handler(
 ) {
   const params = new URLSearchParams(HOTPEPPER_SEACH_CONFIG.params);
   const response = await fetch(`${HOTPEPPER_SEACH_QUERY}?${params}`);
-  const shops = await response.json();
+  const { results } = await response.json();
 
-  res.status(200).json({ shops });
+  res.status(200).json(results);
 }

@@ -29,7 +29,7 @@ export const MatchingCards = () => {
 
   return (
     <div>
-      {shops.map((item, index) => {
+      {/* {shops.map((item, index) => {
         return (
           <div key={index}>
             <BackGroundImage image={item.photo.pc.l} />
@@ -44,7 +44,7 @@ export const MatchingCards = () => {
             />
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };

@@ -7,9 +7,12 @@ import { Shop, Shops } from "../../constants/Types/Hotpepper";
  * @param param number
  * @returns Shops
  */
-export const PickApiData = (data: JSON, param: number): Shops => {
-  const response: [string, Shop][] = Object.entries(data);
-  const results: Shops[] = Object.values(Object.values(response[0][1])[0]);
+export const PickApiData = (data: any, param: number): Shops => {
+  console.log(data);
+  const shops = data.shop;
+  console.log(shops);
+  // const response: [string, Shop][] = Object.entries(data);
+  // const results: Shops[] = Object.values(Object.values(response[0][1])[0]);
 
-  return results[param];
+  // return results[param];
 };
