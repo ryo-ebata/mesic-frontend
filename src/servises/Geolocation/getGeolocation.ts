@@ -27,10 +27,13 @@ export const getGeolocation = () => {
     },
     optionObj
   );
-  const location: Locations = {
-    lat: "35.6598003",
-    lng: "139.7023894",
-  };
+
+  if (!location) {
+    const location: Locations = {
+      lat: "35.6598003",
+      lng: "139.7023894",
+    };
+  }
 
   return location;
 };
