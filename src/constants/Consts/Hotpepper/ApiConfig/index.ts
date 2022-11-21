@@ -8,7 +8,6 @@ const HOTPEPPER_SEACH_CONFIG: Config = {
       "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept",
   },
   params: {
-    key: HOTPEPPER_API_KEY,
     keyword: "w",
     format: "json",
   },
