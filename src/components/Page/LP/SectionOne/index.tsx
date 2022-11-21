@@ -1,26 +1,70 @@
-import { Section } from "../../../Templates/Section";
+import { useEffect, useRef } from "react";
+import { makeThree } from "../../../../servises/LP/three";
+import { motion } from "framer-motion";
 
 export const LP = () => {
+  let canvas: HTMLElement;
+
+  useEffect(() => {
+    if (canvas) return;
+
+    // canvasを取得
+    canvas = document.getElementById("canvas")!;
+
+    makeThree(canvas);
+  }, []);
   return (
-    <div
+    <motion.div
       style={{
-        overflow: "auto",
-        scrollSnapType: "y",
-        height: "100vh",
+        overflow: "hidden",
+        width: "100vw",
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <Section
-        leftColor="#F95738"
-        rightColor="#E7DB73"
-        shadowColor="#35A7FF"
-        logoSrc="/img/spaghetti.png"
+      <motion.img
+        src="/img/blobanimation.svg"
+        alt=""
+        style={{
+          position: "absolute",
+          width: "700px",
+          top: "-300px",
+          left: "-300px",
+        }}
+        initial={{
+          opacity: 0,
+          width: 10,
+        }}
+        animate={{
+          opacity: 1,
+          width: [0, 710, 700],
+        }}
+        transition={{
+          duration: 2,
+        }}
       />
-      <Section
-        leftColor="#f2f2f2"
-        rightColor="#CD5954"
-        shadowColor="#465362"
-        logoSrc="/img/gyoza.png"
+      <motion.img
+        src="/img/blobanimation.svg"
+        alt=""
+        style={{
+          position: "absolute",
+          width: "700px",
+          bottom: "-300px",
+          right: "-300px",
+        }}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          width: [0, 710, 700],
+        }}
+        transition={{
+          duration: 1,
+        }}
       />
-    </div>
+      <canvas id="canvas"></canvas>
+    </motion.div>
   );
 };

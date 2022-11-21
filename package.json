@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-particles-js": "^3.6.0",
     "three": "^0.146.0",
+    "use-intersection": "^0.2.1",
     "xml2json": "^0.12.0"
   },
   "devDependencies": {
