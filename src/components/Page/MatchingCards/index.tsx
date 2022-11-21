@@ -1,30 +1,28 @@
-import { Shops, MapData } from "../../../constants/Types/Hotpepper";
+import { Shops } from "../../../constants/Types/Hotpepper";
 import { CardSection } from "../../Templates/CardSection";
 import { useEffect, useState } from "react";
-import { PickApiData } from "../../../servises/Hotpepper/PickShops";
 import { BackGroundImage } from "../../Organisms/BackGroundImage";
-import { RESPONSE_PARAMS } from "../../../constants/Consts/Hotpepper/ResponseParams";
+import {
+  getGeolocation,
+  Locations,
+} from "../../../servises/Geolocation/getGeolocation";
+import { generateQuery } from "../../../servises/Hotpepper/generateQuery";
 
-const mapData: MapData = {
-  lat: 34.703261,
-  lng: 135.495693,
-  range: 5,
-};
-
-const initialData: Shops = [];
+const initialShop: Shops = [];
 
 export const MatchingCards = () => {
-  const [shops, setShops] = useState(initialData);
+  const [shops, setShops] = useState(initialShop);
 
+  const fetchShops = async (location: Locations) => {
+    const params = generateQuery(location);
+    const response: Response = await fetch(`/api/hotpepper?${params}`);
+    const data = await response.json();
+    setShops(data.shop);
+    console.log(data.shop);
+  };
   useEffect(() => {
-    const fetchShops = async () => {
-      const response: Response = await fetch("/api/hotpepper");
-      const data: JSON = await response.json();
-      const shops: Shops = PickApiData(data, RESPONSE_PARAMS.SHOPS);
-
-      setShops(shops);
-    };
-    fetchShops();
+    const location: Locations = getGeolocation();
+    fetchShops(location);
   }, []);
 
   return (

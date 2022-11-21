@@ -1,14 +1,18 @@
+import { GetApp } from "@mui/icons-material";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { HOTPEPPER_SEACH_CONFIG } from "../../constants/Consts/Hotpepper/ApiConfig";
+import { HOTPEPPER_API_KEY } from "../../constants/Consts/Hotpepper/ApiKey";
 import { HOTPEPPER_SEACH_QUERY } from "../../constants/Consts/Hotpepper/ApiUrl";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const params = new URLSearchParams(HOTPEPPER_SEACH_CONFIG.params);
-  const response = await fetch(`${HOTPEPPER_SEACH_QUERY}?${params}`);
-  const shops = await response.json();
+  const query: {} = req.query;
+  const params = new URLSearchParams(query);
+  const response: Response = await fetch(
+    `${HOTPEPPER_SEACH_QUERY}?key=${HOTPEPPER_API_KEY}&${params}`
+  );
+  const { results } = await response.json();
 
-  res.status(200).json({ shops });
+  res.status(200).json(results);
 }
