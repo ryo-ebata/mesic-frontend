@@ -43,20 +43,20 @@ export const makeThree = (canvas: HTMLElement) => {
   // ボックスジオメトリー
   const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
   const box = new THREE.Mesh(boxGeometry, material);
-  box.position.z = -5;
+  box.position.z = 0;
   box.rotation.set(10, 10, 10);
   scene.add(box);
 
   const sphire = new THREE.SphereGeometry(10, 100, 100);
   const ball = new THREE.Mesh(sphire, material);
-  ball.position.z = -5;
+  ball.position.z = 0;
   ball.rotation.set(10, 10, 10);
   scene.add(ball);
 
   // ライト
   const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
   scene.add(ambientLight);
-  const pointLight = new THREE.PointLight(0xffffff, 0.2);
+  const pointLight = new THREE.PointLight(0xffffff, 1.0);
   pointLight.position.set(1, 2, 3);
   scene.add(pointLight);
 

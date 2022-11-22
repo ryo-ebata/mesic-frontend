@@ -49,7 +49,7 @@ export const LP = () => {
             scale: [0, 1],
           }}
           transition={{
-            duration: 2,
+            duration: 1.5,
           }}
         />
       </motion.div>
