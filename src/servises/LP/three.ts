@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export const makeThree = (canvas: HTMLElement) => {
   // シーン
@@ -41,17 +42,36 @@ export const makeThree = (canvas: HTMLElement) => {
   ];
 
   // ボックスジオメトリー
-  const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+  const boxGeometry = new THREE.BoxGeometry(3, 3, 3);
   const box = new THREE.Mesh(boxGeometry, material);
-  box.position.z = 0;
-  box.rotation.set(10, 10, 10);
+  [box.position.x, box.position.y, box.position.z] = [0, 0, 0];
+  box.rotation.set(0, 0, 0);
   scene.add(box);
 
-  const sphire = new THREE.SphereGeometry(10, 100, 100);
-  const ball = new THREE.Mesh(sphire, material);
-  ball.position.z = 0;
-  ball.rotation.set(10, 10, 10);
-  scene.add(ball);
+  // console.log(THREE);
+  // const loader = new THREE.GLTFLoader();
+  // const url = "3d/test.glb";
+
+  // // window size
+  // const w_height = window.innerHeight;
+
+  // let model = null;
+  // loader.load(
+  //   url,
+  //   function (gltf) {
+  //     model = gltf.scene;
+  //     // model.name = "model_with_cloth";
+  //     model.scale.set(100.0, 100.0, 100.0);
+  //     model.position.set(0, (w_height / 3) * -1, 0);
+  //     scene.add(gltf.scene);
+
+  //     // model["test"] = 100;
+  //   },
+  //   function (error) {
+  //     console.log("An error happened");
+  //     console.log(error);
+  //   }
+  // );
 
   // ライト
   const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
@@ -83,46 +103,26 @@ export const makeThree = (canvas: HTMLElement) => {
 
   animationScripts.push({
     start: 0,
-    end: 20,
+    end: 5,
     function() {
       camera.lookAt(box.position);
-      camera.position.set(0, -5, 0);
-      box.position.z = lerp(1, 5, scaleParcent(0, 20));
+      box.position.z = lerp(0, -10, scaleParcent(0, 10));
     },
   });
 
-  animationScripts.push({
-    start: 20,
-    end: 40,
-    function() {
-      box.position.x = lerp(1, 10, scaleParcent(20, 40));
-      box.position.z = lerp(5, 10, scaleParcent(20, 40));
-    },
-  });
+  // animationScripts.push({
+  //   start: 5,
+  //   end: 10,
+  //   function() {
+  //     box.position.y = lerp(0, 10, scaleParcent(0, 10));
+  //   },
+  // });
 
   animationScripts.push({
-    start: 40,
-    end: 60,
+    start: 10,
+    end: 15,
     function() {
-      box.position.x = lerp(10, 15, scaleParcent(40, 60));
-      box.position.y = lerp(1, 15, scaleParcent(40, 60));
-      camera.position.z = lerp(10, 15, scaleParcent(40, 60));
-    },
-  });
-
-  animationScripts.push({
-    start: 60,
-    end: 80,
-    function() {
-      camera.position.z = lerp(30, 40, scaleParcent(60, 80));
-    },
-  });
-
-  animationScripts.push({
-    start: 80,
-    end: 101,
-    function() {
-      camera.position.z = lerp(50, 60, scaleParcent(80, 101));
+      box.position.z = lerp(-10, -15, scaleParcent(10, 15));
     },
   });
 
@@ -157,7 +157,6 @@ export const makeThree = (canvas: HTMLElement) => {
     playScrollAnimation();
 
     renderer.render(scene, camera);
-    console.log(scrollParcent);
   };
   tick();
 };

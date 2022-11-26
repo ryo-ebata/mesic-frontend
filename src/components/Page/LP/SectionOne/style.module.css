@@ -1,46 +1,4 @@
-.wrap {
-  overflow: hidden;
+.size {
   width: 100%;
-  position: fixed;
-  z-index: 1;
-  background: radial-gradient(#fff, #ffc);
-}
-
-.blob {
-  position: fixed;
-  width: 700px;
-  z-index: 3;
-}
-
-.blobLeft {
-  top: -300px;
-  left: -300px;
-}
-
-.blobRight {
-  bottom: -300px;
-  right: -300px;
-}
-
-.canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-@media screen and (max-width: 640px) {
-  .blob {
-    width: 300px;
-  }
-
-  .blobLeft {
-    top: -150px;
-    left: -150px;
-  }
-
-  .blobRight {
-    bottom: -150px;
-    right: -150px;
-  }
+  height: 100vh;
 }
