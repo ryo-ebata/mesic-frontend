@@ -1,4 +1,3 @@
-import { GetApp } from "@mui/icons-material";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { HOTPEPPER_API_KEY } from "../../constants/Consts/Hotpepper/ApiKey";
 import { HOTPEPPER_SEACH_QUERY } from "../../constants/Consts/Hotpepper/ApiUrl";
