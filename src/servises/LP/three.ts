@@ -86,7 +86,7 @@ export const makeThree = (canvas: HTMLElement) => {
     end: 20,
     function() {
       camera.lookAt(box.position);
-      camera.position.set(0, 1, 0);
+      camera.position.set(0, -5, 0);
       box.position.z = lerp(1, 5, scaleParcent(0, 20));
     },
   });
