@@ -1,7 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "../constants/Consts/MaterialUI/theme";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
 import createEmotionCache from "../constants/Consts/MaterialUI/createEmotionCache";
+import theme from "../constants/Consts/MaterialUI/theme";
 
 export default class MyDocument extends Document {
   render() {

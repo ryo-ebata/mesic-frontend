@@ -1,7 +1,9 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+
 import { LP } from "../components/Page/LP";
 import { APP_NAME } from "../constants/Consts/App";
+
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (

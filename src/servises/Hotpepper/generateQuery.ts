@@ -1,4 +1,4 @@
-import { Locations } from "../../components/Page/MatchingCards";
+import type { Locations } from "../../components/Page/MatchingCards";
 
 export const generateQuery = (location: Locations) => {
   const query = {

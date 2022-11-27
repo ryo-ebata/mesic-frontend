@@ -1,7 +1,9 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+
 import Home from "..";
 import { MatchingCards } from "../../components/Page/MatchingCards";
+
+import type { NextPage } from "next";
 
 const Restaurant: NextPage = () => {
   return (

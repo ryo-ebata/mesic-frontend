@@ -1,10 +1,13 @@
-import Head from "next/head";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "@mui/material/styles";
+import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider, EmotionCache } from "@emotion/react";
-import theme from "../constants/Consts/MaterialUI/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import Head from "next/head";
+
 import createEmotionCache from "../constants/Consts/MaterialUI/createEmotionCache";
+import theme from "../constants/Consts/MaterialUI/theme";
+
+import type { EmotionCache } from "@emotion/react";
+import type { AppProps } from "next/app";
 
 const clientSideEmotionCache = createEmotionCache();
 interface MyAppProps extends AppProps {
