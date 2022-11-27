@@ -14,8 +14,13 @@
   font-weight: bold;
   border: 1px solid #222;
   padding: 0 10px;
+  box-shadow: 5px 5px 0 #222;
+  transition: 1s;
 }
 
 .button:hover {
   cursor: pointer;
+  background-color: #222;
+  color: #fff;
+  box-shadow: -5px -5px 0 red, 5px 5px 0 #ffd700;
 }

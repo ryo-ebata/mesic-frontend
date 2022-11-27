@@ -51,8 +51,8 @@ export const LP = () => {
           <OrbitControls enableRotate={true} enableZoom={false} />
           <Text
             position={[10, 1, 15]}
-            font="/Roboto-Black.ttf"
-            fontSize={10}
+            font="/fonts/Raleway-Bold.ttf"
+            fontSize={8}
             color={"#222"}
           >
             MESIC
@@ -60,7 +60,7 @@ export const LP = () => {
           <Text
             position={[15, 5, 6]}
             rotation={[0, -80, 0]}
-            font="/Roboto-Black.ttf"
+            font="/fonts/Raleway-SemiBold.ttf"
             fontSize={2.5}
             color={"#222"}
           >
@@ -69,7 +69,7 @@ export const LP = () => {
           <Text
             position={[15, 0, 1]}
             rotation={[0, -80, 0]}
-            font="/Roboto-Black.ttf"
+            font="/fonts/Raleway-SemiBold.ttf"
             fontSize={3}
             color={"#222"}
           >
@@ -78,7 +78,7 @@ export const LP = () => {
           <Text
             position={[15, -5, -2]}
             rotation={[0, -80, 0]}
-            font="/Roboto-Black.ttf"
+            font="/fonts/Raleway-SemiBold.ttf"
             fontSize={3}
             color={"#222"}
           >
