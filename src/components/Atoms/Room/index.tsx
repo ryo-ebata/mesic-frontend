@@ -5,11 +5,11 @@ export type Props = {
   size: number;
 };
 
-export const Steak: React.FC<Props> = ({ size }) => {
-  const { scene } = useGLTF("assets/steak.glb");
+export const Room: React.FC<Props> = ({ size }) => {
+  const { scene } = useGLTF("assets/room.glb");
 
   return (
-    <group dispose={null} position={[0, 8, 0]} rotation={[0.4, 1.5, 0]}>
+    <group dispose={null} rotation={[0, 3.95, 0]}>
       <primitive scale={[size, size, size]} object={scene} />
     </group>
   );
