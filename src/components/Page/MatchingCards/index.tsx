@@ -39,7 +39,41 @@ export const MatchingCards = () => {
   }, []);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        <img
+          src="/img/loading/hamburger-animate.svg"
+          alt=""
+          style={{
+            width: "60%",
+          }}
+        />
+        <p
+          style={{
+            fontSize: "20px",
+          }}
+        >
+          Loading...
+        </p>
+        <p
+          style={{
+            fontSize: "24px",
+            fontWeight: "bold",
+          }}
+        >
+          店舗情報を検索しています。
+        </p>
+      </div>
+    );
   }
 
   return (

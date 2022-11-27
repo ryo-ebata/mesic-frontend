@@ -3,11 +3,41 @@ import { Canvas } from "@react-three/fiber";
 import { Text, OrbitControls } from "@react-three/drei";
 import { Steak, Desk, Chair, Room } from "../../../Atoms";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const LP = () => {
   return (
-    <motion.div className={styles.wrap}>
-      <div className={styles.wrap}>
+    <motion.div
+      className={styles.wrap}
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: [0, 1],
+      }}
+      exit={{
+        opacity: 0,
+      }}
+    >
+      <div className={styles.header}>
+        <Link href="/restaurants" className={styles.link}>
+          <div className={styles.button}>
+            <p>MESICを使う</p>
+          </div>
+        </Link>
+      </div>
+      <motion.div
+        className={styles.wrap}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: [0, 1],
+        }}
+        exit={{
+          opacity: 0,
+        }}
+      >
         <Canvas
           camera={{
             fov: 30,
@@ -59,7 +89,7 @@ export const LP = () => {
           <Desk size={1} />
           <Chair size={1} />
         </Canvas>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
