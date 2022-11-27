@@ -1,9 +1,9 @@
-import { Shop, Shops } from "../../../constants/Types/Hotpepper";
+import { Shops } from "../../../constants/Types/Hotpepper";
 import { CardSection } from "../../Templates/CardSection";
 import { useEffect, useState } from "react";
-import { BackGroundImage } from "../../Organisms/BackGroundImage";
 import { generateQuery } from "../../../servises/Hotpepper/generateQuery";
 import useSWR, { Fetcher } from "swr";
+import { Loading } from "../../Templates/Loading";
 
 export type Locations = {
   lat: number;
@@ -39,14 +39,13 @@ export const MatchingCards = () => {
   }, []);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
     <div>
       {data.shop.map((item, index) => (
         <div key={index}>
-          <BackGroundImage image={item.photo.pc.l} />
           <CardSection
             image={item.photo.pc.l}
             title={item.name}
