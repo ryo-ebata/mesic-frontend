@@ -1,6 +1,5 @@
 import { Card, CardHeader, CardContent, Typography } from "@mui/material";
 import { ElementType } from "react";
-import { CardFooter } from "../../Molecules/CardFooter";
 
 export type Props = {
   image: string;
@@ -53,7 +52,6 @@ export const CardFront: React.FC<Props> = ({
           {content}
         </Typography>
       </CardContent>
-      <CardFooter />
     </Card>
   );
 };

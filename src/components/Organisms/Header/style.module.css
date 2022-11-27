@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  z-index: 100000;
+  right: 2vw;
+  top: 2vw;
+  display: flex;
+}
+
+.button {
+  font-weight: bold;
+  border: 1px solid #222;
+  padding: 0 10px;
+  box-shadow: 5px 5px 0 #222;
+  transition: 1s;
+}
+
+.buttonAbout {
+  margin-left: 20px;
+}
+
+.buttonRestaurants:hover {
+  cursor: pointer;
+  background-color: #222;
+  color: #fff;
+  box-shadow: -5px -5px 0 red, 5px 5px 0 #ffd700;
+}
+
+.buttonAbout:hover {
+  cursor: pointer;
+  background-color: #222;
+  color: #fff;
+  box-shadow: -5px -5px 0 orange, 5px 5px 0 blue;
+}
